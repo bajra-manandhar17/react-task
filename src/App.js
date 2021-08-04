@@ -1,9 +1,13 @@
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, useHistory } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 import Index from './components';
 import ListPage from './components/ListPage';
 import UserContextProvider from './context/UserContext';
 
 function App() {
+	const history = useHistory();
+	const handleClick = () => history.push('/list');
+
 	return (
 		<Switch>
 			<UserContextProvider>
@@ -14,6 +18,7 @@ function App() {
 						</div>
 					</div>
 					<Route path='/list' component={ListPage} />
+					<Button onClick={handleClick}>View List</Button>
 				</div>
 			</UserContextProvider>
 		</Switch>

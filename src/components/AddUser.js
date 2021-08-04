@@ -64,6 +64,7 @@ const AddUser = () => {
 			</Form.Group>
 			<Form.Group>
 				<Form.Control
+					type='text'
 					placeholder='DOB (dd/mm/yyyy)*'
 					name='dob'
 					value={dob}
