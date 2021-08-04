@@ -58,7 +58,7 @@ const AddUser = () => {
 					placeholder='Phone Number *'
 					name='phone'
 					value={phone}
-					maxLength={10}
+					minLength={7}
 					onChange={(e) => onInputChange(e)}
 					required
 				/>
@@ -66,32 +66,29 @@ const AddUser = () => {
 			<Form.Group>
 				<Form.Control
 					type='text'
-					placeholder='DOB (dd/mm/yyyy)*'
+					placeholder='DOB (dd/mm/yyyy)'
 					name='dob'
 					value={dob}
 					onChange={(e) => onInputChange(e)}
-					required
 				/>
 			</Form.Group>
 			<Row className='mb-3'>
 				<Form.Group as={Col}>
 					<Form.Control
 						type='text'
-						placeholder='City  *'
+						placeholder='City'
 						name='city'
 						value={city}
 						onChange={(e) => onInputChange(e)}
-						required
 					/>
 				</Form.Group>
 				<Form.Group as={Col}>
 					<Form.Control
 						type='text'
-						placeholder='District  *'
+						placeholder='District'
 						name='district'
 						value={district}
 						onChange={(e) => onInputChange(e)}
-						required
 					/>
 				</Form.Group>
 			</Row>
@@ -103,7 +100,7 @@ const AddUser = () => {
 					onChange={(e) => onInputChange(e)}
 					custom
 				>
-					<option>Input From the Field</option>
+					<option>~</option>
 					<option value='1'>Province 1</option>
 					<option value='2'>Province 2</option>
 					<option value='3'>Province 3</option>
