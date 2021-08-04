@@ -2,14 +2,12 @@ import { Route, Switch } from 'react-router';
 import UserList from './UserList';
 import AddUser from './AddUser';
 
-const Index = ({ match }) => {
-	const { path } = match;
-
+const Index = () => {
 	return (
 		<div>
 			<Switch>
-				<Route exact path={path} component={UserList}></Route>
-				<Route path={`${path}/add`} component={AddUser}></Route>
+				<Route exact path='/' component={UserList} />
+				<Route path='/add' component={AddUser} />
 			</Switch>
 		</div>
 	);

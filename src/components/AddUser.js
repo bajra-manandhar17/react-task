@@ -58,6 +58,7 @@ const AddUser = () => {
 					placeholder='Phone Number *'
 					name='phone'
 					value={phone}
+					maxLength={10}
 					onChange={(e) => onInputChange(e)}
 					required
 				/>
